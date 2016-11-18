@@ -69,11 +69,10 @@ You can also build the project and generate the artifacts (including the prebuil
 This is useful if you want to deploy the artifacts locally, for example for adding a new starter.
 
 First, you need to generate the prebuilt applications.
-This is done by running the application generation Maven plugin.
-You can do so by simply invoking the corresponding script in the root of the project.
+There is a maven profile available do do this.
 
 ```
-./generate.sh
+./mvnw clean install -PgenerateApps
 
 ```
 
@@ -85,7 +84,7 @@ cd apps
 mvn clean install
 ```
 
-For the each of the prebuilt applications, the script will generate the following items:
+Each of the generated applications will contain:
 
 * `pom.xml` file with the required dependencies
 * a class that contains the `main` method of the application and imports the predefined configuration
@@ -160,7 +159,9 @@ maven and docker artifacts for it using the existing tooling provided by the
 spring cloud task app starter infrastructure. For explanation purposes, we will assume that we are creating a new
 task application for a technology named foobar.
 
-* Create a new top level module named spring-cloud-starter-task-foobar
+* Create a new top level module named spring-cloud-starter-task-foobar (preferably in a new empty directory)
+
+Have this module inherit from the `task-app-starters-build` in the official spring cloud task app starters.
 
 Please look into the existing starters for how to design and structure a new one. Ensure that you name the
 main `@Configuration` class of your starter as `FoobarTaskConfiguration` as this is the default convention used by
@@ -174,14 +175,10 @@ spring-cloud in that here we don't provide a way to auto configure any configura
 Rather, we delegate this responsibility to the maven plugin that is generating the binder based apps. Therefore, you don't
 have to provide a spring.factories file that lists all your configuration classes.
 
-* Add the new foobar task starter module to the root pom of the repository
+* Add the new foobar task starter module to the root pom.xml
 
-* At the root of the repository build and install the new module into your local maven cache:
-
-`./mvnw clean install -pl :spring-cloud-starter-task-foobar`
-
-* You need to add the new starter dependency to the `spring-cloud-task-app-dependencies` bill of material (BOM) in the
-dependecy management section. For example,
+* You need to add the new starter dependency to a bill of material (BOM) called `foobar-task-app-dependencies` in the
+dependency management section. For example,
 
 [source,xml]
 ----
@@ -197,25 +194,39 @@ dependecy management section. For example,
 ...
 ----
 
-* Build and install the newly updated bom:
+* Please ensure that the bom inherits from `task-app-starters-core-dependencies`
 
-`./mvnw clean install -pl :spring-cloud-task-app-dependencies`
+* Add the BOM to the root pom.xml
 
-* At this point, you are ready to generate the spring boot app for foobar task. Go to the
-`spring-cloud-task-app-generator` module and start editing as below.
-
-The minimal configuration needed to generate the app is to add to plugin configuration in
-spring-cloud-task-app-generator/pom.xml. There are other plugin options that customize the generated applications
-which are described in the plugin documentation (https://github.com/spring-cloud/spring-cloud-stream-app-maven-plugin).
-A few plugin features are described below.
+* Please add the following xml snippet to the pom.xml file of spring-cloud-starter-task-foobar.
 
 [source,xml]
 ----
-<generatedApps>
-....
-    <foobar-task />
-....
-</generatedApps>
+<build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-app-starter-doc-maven-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.cloud.stream.app.plugin</groupId>
+                <artifactId>spring-cloud-stream-app-maven-plugin</artifactId>
+                <configuration>
+                    <generatedProjectHome>${session.executionRootDirectory}/apps</generatedProjectHome>
+                    <generatedProjectVersion>${project.version}</generatedProjectVersion>
+                    <bom>
+                        <name>scs-bom</name>
+                        <groupId>org.springframework.cloud.task.app</groupId>
+                        <artifactId>foobar-task-app-dependencies</artifactId>
+                        <version>${project.version}</version>
+                    </bom>
+                    <generatedApps>
+                        <foobar-task/>
+                    </generatedApps>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
 ----
 
 More information about the maven plugin used above can be found here:
@@ -233,9 +244,11 @@ this is how you can tell the plugin to override the default.
 </foobar-task>
 ----
 
-* Go to the root of the repository and execute the script: `./generateApps.sh`
+* At this point, you can build the project and generate the apps.
 
-This will generate the foobar task app in a directory named `apps` at the root of the repository.
+`mvn clean install -PgenerateApps`
+
+This will generate the foobar task app in a directory named `apps` at the root of the project.
 If you want to change the location where the apps are generated, for instance /tmp/task-apps, you can do it in the
 configuration section of the plugin.
 
