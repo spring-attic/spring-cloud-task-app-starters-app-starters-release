@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<groupId>org.springframework.cloud.task.app</groupId>
+		<artifactId>task-app-starters-release-train-build</artifactId>
+		<version>Addison.BUILD-SNAPSHOT</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>spring-cloud-task-app-descriptor</artifactId>
+	<name>spring-cloud-task-app-descriptor</name>
+
+	<build>
+		<resources>
+			<resource>
+				<directory>src/main/resources</directory>
+				<filtering>true</filtering>
+				<includes>
+					<include>META-INF/task-apps-maven.properties</include>
+					<include>META-INF/task-apps-docker.properties</include>
+				</includes>
+			</resource>
+		</resources>
+
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.gmaven</groupId>
+				<artifactId>gmaven-plugin</artifactId>
+				<version>1.5</version>
+				<executions>
+					<execution>
+						<phase>validate</phase>
+						<goals>
+							<goal>execute</goal>
+						</goals>
+						<configuration>
+							<source><![CDATA[
+								pom.properties['timestamp-docker.tag']=
+										"${spring-cloud-starter-task-timestamp.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-timestamp.version}";
+								pom.properties['spark-client-docker.tag']=
+										"${spring-cloud-starter-task-spark-client.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-spark-client.version}";
+								pom.properties['spark-cluster-docker.tag']=
+										"${spring-cloud-starter-task-spark-cluster.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-spark-cluster.version}";
+								pom.properties['spark-yarn-docker.tag']=
+										"${spring-cloud-starter-task-spark-yarn.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-spark-yarn.version}";
+							]]></source>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>build-helper-maven-plugin</artifactId>
+				<version>1.8</version>
+				<executions>
+					<execution>
+						<id>attach-artifacts</id>
+						<phase>package</phase>
+						<goals>
+							<goal>attach-artifact</goal>
+						</goals>
+						<configuration>
+							<artifacts>
+								<artifact>
+									<file>target/classes/META-INF/task-apps-maven.properties</file>
+									<type>task-apps-maven</type>
+									<!--<classifier>task-apps-maven.properties</classifier>-->
+								</artifact>
+								<artifact>
+									<file>target/classes/META-INF/task-apps-docker.properties</file>
+									<type>task-apps-docker</type>
+								</artifact>
+							</artifacts>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+
+	</build>
+
+</project>

@@ -1,0 +1,12 @@
+[[spring-cloud-task-modules-tasks]]
+
+:leveloffset: +1
+:app-starters-root:  https://raw.githubusercontent.com/spring-cloud/spring-cloud-task-app-starters/master
+
+[[spring-cloud-task-modules-spark-client]]
+include::{app-starters-root}/spring-cloud-starter-task-spark-client/README.adoc[tags=ref-doc]
+include::{app-starters-root}/spring-cloud-starter-task-spark-cluster/README.adoc[tags=ref-doc]
+include::{app-starters-root}/spring-cloud-starter-task-spark-yarn/README.adoc[tags=ref-doc]
+include::{app-starters-root}/spring-cloud-starter-task-timestamp/README.adoc[tags=ref-doc]
+
+:leveloffset: -1
