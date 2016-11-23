@@ -43,7 +43,9 @@
 										"${spring-cloud-starter-task-spark-cluster.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-spark-cluster.version}";
 								pom.properties['spark-yarn-docker.tag']=
 										"${spring-cloud-starter-task-spark-yarn.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-spark-yarn.version}";
-							]]></source>
+								pom.properties['jdbchdfs-local-docker.tag']=
+										"${spring-cloud-starter-task-jdbchdfs-local.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-jdbchdfs-local.version}";
+								]]></source>
 						</configuration>
 					</execution>
 				</executions>
