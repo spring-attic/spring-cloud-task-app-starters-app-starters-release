@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>org.springframework.cloud.task.app</groupId>
 		<artifactId>task-app-starters-release-train-build</artifactId>
-		<version>Addison.BUILD-SNAPSHOT</version>
+		<version>Addison.RC1</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
