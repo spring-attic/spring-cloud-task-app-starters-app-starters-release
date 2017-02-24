@@ -18,13 +18,13 @@
 	</modules>
 
 	<properties>
-		<spring-cloud-starter-task-spark-client.version>1.1.1.BUILD-SNAPSHOT</spring-cloud-starter-task-spark-client.version>
-		<spring-cloud-starter-task-spark-cluster.version>1.1.1.BUILD-SNAPSHOT</spring-cloud-starter-task-spark-cluster.version>
-		<spring-cloud-starter-task-spark-yarn.version>1.1.1.BUILD-SNAPSHOT</spring-cloud-starter-task-spark-yarn.version>
-		<spring-cloud-starter-task-sqoop-job.version>1.1.1.BUILD-SNAPSHOT</spring-cloud-starter-task-sqoop-job.version>
-		<spring-cloud-starter-task-sqoop-tool.version>1.1.1.BUILD-SNAPSHOT</spring-cloud-starter-task-sqoop-tool.version>
-		<spring-cloud-starter-task-timestamp.version>1.1.1.BUILD-SNAPSHOT</spring-cloud-starter-task-timestamp.version>
-		<spring-cloud-starter-task-jdbchdfs-local.version>1.1.1.BUILD-SNAPSHOT</spring-cloud-starter-task-jdbchdfs-local.version>
+		<spring-cloud-starter-task-spark-client.version>1.2.0.M1</spring-cloud-starter-task-spark-client.version>
+		<spring-cloud-starter-task-spark-cluster.version>1.2.0.M1</spring-cloud-starter-task-spark-cluster.version>
+		<spring-cloud-starter-task-spark-yarn.version>1.2.0.M1</spring-cloud-starter-task-spark-yarn.version>
+		<spring-cloud-starter-task-sqoop-job.version>1.2.0.M1</spring-cloud-starter-task-sqoop-job.version>
+		<spring-cloud-starter-task-sqoop-tool.version>1.2.0.M1</spring-cloud-starter-task-sqoop-tool.version>
+		<spring-cloud-starter-task-timestamp.version>1.2.0.M1</spring-cloud-starter-task-timestamp.version>
+		<spring-cloud-starter-task-jdbchdfs-local.version>1.2.0.M1</spring-cloud-starter-task-jdbchdfs-local.version>
 	</properties>
 	<profiles>
 		<profile>
