@@ -9,5 +9,6 @@ include::{app-starters-root}/spring-cloud-starter-task-spark-cluster/README.adoc
 include::{app-starters-root}/spring-cloud-starter-task-spark-yarn/README.adoc[tags=ref-doc]
 include::{app-starters-root}/spring-cloud-starter-task-timestamp/README.adoc[tags=ref-doc]
 include::{app-starters-root}/spring-cloud-starter-task-jdbchdfs-local/README.adoc[tags=ref-doc]
+include::{app-starters-root}/spring-cloud-starter-task-composedtaskrunner/README.adoc[tags=ref-doc]
 
 :leveloffset: -1

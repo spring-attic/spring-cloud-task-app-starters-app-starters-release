@@ -194,7 +194,7 @@ dependency management section. For example,
 ...
 ----
 
-* Please ensure that the bom inherits from `task-app-starters-core-dependencies`
+* Please ensure that the bom inherits from `spring-cloud-dependencies-parent`
 
 * Add the BOM to the root pom.xml
 
@@ -229,8 +229,7 @@ dependency management section. For example,
     </build>
 ----
 
-More information about the maven plugin used above can be found here:
-https://github.com/spring-cloud/spring-cloud-stream-app-maven-plugin
+More information about the maven plugin used above can be found https://github.com/spring-cloud/spring-cloud-app-starters-maven-plugins/tree/master/spring-cloud-stream-app-maven-plugin[here].
 
 If you did not follow the default convention expected by the plugin of where it is looking for the main configuration
 class, which is `org.springfamework.cloud.task.app.foobar.FoobarTaskConfiguration`, you can override that in
@@ -309,7 +308,7 @@ You can cd into these custom foobar-task directories and do the following to bui
 
 `mvn clean install`
 
-This would install the foobar-task into your local maven cache (~/.m2 by default).
+This will install the foobar-task into your local maven cache (~/.m2 by default).
 
 The app generation phase adds an integration test to the app project that ensures all the spring
 components and contexts are loaded properly. However, these tests are not run by default when you do a `mvn install`.
@@ -347,4 +346,4 @@ Then do this:
 
 `mvn clean package docker:build docker:push -Ddocker.username=[provide your username] -Ddocker.password=[provide password]`
 
-This would upload the docker image to the docker hub in your custom repository.
+This will upload the docker image to the docker hub in your custom repository.

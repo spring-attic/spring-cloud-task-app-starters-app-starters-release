@@ -25,6 +25,7 @@
 		<!--<spring-cloud-starter-task-sqoop-tool.version>1.2.0.M1</spring-cloud-starter-task-sqoop-tool.version>-->
 		<spring-cloud-starter-task-timestamp.version>1.2.0.BUILD-SNAPSHOT</spring-cloud-starter-task-timestamp.version>
 		<spring-cloud-starter-task-jdbchdfs-local.version>1.2.0.BUILD-SNAPSHOT</spring-cloud-starter-task-jdbchdfs-local.version>
+		<spring-cloud-starter-task-composedtaskrunner.version>1.2.0.BUILD-SNAPSHOT</spring-cloud-starter-task-composedtaskrunner.version>
 	</properties>
 	<profiles>
 		<profile>

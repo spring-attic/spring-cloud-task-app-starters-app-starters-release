@@ -18,6 +18,7 @@
 				<includes>
 					<include>META-INF/task-apps-maven.properties</include>
 					<include>META-INF/task-apps-docker.properties</include>
+					<include>META-INF/task-apps-maven-repo-url.properties</include>
 				</includes>
 			</resource>
 		</resources>
@@ -35,6 +36,9 @@
 						</goals>
 						<configuration>
 							<source><![CDATA[
+								pom.properties['repo-spring-io']=
+										"${spring-cloud-starter-task-timestamp.version}".contains('BUILD-SNAPSHOT') ? 'repo.spring.io/snapshot' :
+												"${spring-cloud-starter-task-timestamp.version}".contains('RELEASE') ? 'repo.spring.io/libs-release' : 'repo.spring.io/milestone';
 								pom.properties['timestamp-docker.tag']=
 										"${spring-cloud-starter-task-timestamp.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-timestamp.version}";
 								pom.properties['spark-client-docker.tag']=
@@ -45,6 +49,8 @@
 										"${spring-cloud-starter-task-spark-yarn.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-spark-yarn.version}";
 								pom.properties['jdbchdfs-local-docker.tag']=
 										"${spring-cloud-starter-task-jdbchdfs-local.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-jdbchdfs-local.version}";
+								pom.properties['composedtaskrunner-docker.tag']=
+										"${spring-cloud-starter-task-composedtaskrunner.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-composedtaskrunner.version}"
 								]]></source>
 						</configuration>
 					</execution>
@@ -71,6 +77,10 @@
 								<artifact>
 									<file>target/classes/META-INF/task-apps-docker.properties</file>
 									<type>task-apps-docker</type>
+								</artifact>
+								<artifact>
+									<file>target/classes/META-INF/task-apps-maven-repo-url.properties</file>
+									<type>task-apps-maven-repo-url.properties</type>
 								</artifact>
 							</artifacts>
 						</configuration>
