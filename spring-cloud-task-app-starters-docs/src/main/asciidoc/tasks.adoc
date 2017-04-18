@@ -1,14 +1,15 @@
 [[spring-cloud-task-modules-tasks]]
 
 :leveloffset: +1
-:app-starters-root:  https://raw.githubusercontent.com/spring-cloud-task-app-starters/master
+:app-starters-root:  https://raw.githubusercontent.com/spring-cloud-task-app-starters
+:branch: master
 
 [[spring-cloud-task-modules-spark-client]]
-include::{app-starters-root}/spark-client/spring-cloud-starter-task-spark-client/README.adoc[tags=ref-doc]
-include::{app-starters-root}/spark-cluster/spring-cloud-starter-task-spark-cluster/README.adoc[tags=ref-doc]
-include::{app-starters-root}/spark-yarn/spring-cloud-starter-task-spark-yarn/README.adoc[tags=ref-doc]
-include::{app-starters-root}/timestamp/spring-cloud-starter-task-timestamp/README.adoc[tags=ref-doc]
-include::{app-starters-root}/jdbchdfs-local/spring-cloud-starter-task-jdbchdfs-local/README.adoc[tags=ref-doc]
-include::{app-starters-root}/composed-task-runner/spring-cloud-starter-task-composedtaskrunner/README.adoc[tags=ref-doc]
+include::{app-starters-root}/spark-client/{branch}/spring-cloud-starter-task-spark-client/README.adoc[tags=ref-doc]
+include::{app-starters-root}/spark-cluster/{branch}/spring-cloud-starter-task-spark-cluster/README.adoc[tags=ref-doc]
+include::{app-starters-root}/spark-yarn/{branch}/spring-cloud-starter-task-spark-yarn/README.adoc[tags=ref-doc]
+include::{app-starters-root}/timestamp/{branch}/spring-cloud-starter-task-timestamp/README.adoc[tags=ref-doc]
+include::{app-starters-root}/jdbchdfs-local/{branch}/spring-cloud-starter-task-jdbchdfs-local/README.adoc[tags=ref-doc]
+include::{app-starters-root}/composed-task-runner/{branch}/spring-cloud-starter-task-composedtaskrunner/README.adoc[tags=ref-doc]
 
 :leveloffset: -1
