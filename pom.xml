@@ -2,13 +2,13 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<artifactId>task-app-starters-release-train-build</artifactId>
-	<version>Belmont.BUILD-SNAPSHOT</version>
+	<version>Belmont.RC1</version>
 	<packaging>pom</packaging>
 
 	<parent>
 		<groupId>org.springframework.cloud.task.app</groupId>
 		<artifactId>task-app-starters-build</artifactId>
-		<version>1.2.0.BUILD-SNAPSHOT</version>
+		<version>1.2.0.RC1</version>
 		<relativePath/>
 	</parent>
 
@@ -18,14 +18,14 @@
 	</modules>
 
 	<properties>
-		<spring-cloud-starter-task-spark-client.version>1.2.0.BUILD-SNAPSHOT</spring-cloud-starter-task-spark-client.version>
-		<spring-cloud-starter-task-spark-cluster.version>1.2.0.BUILD-SNAPSHOT</spring-cloud-starter-task-spark-cluster.version>
-		<spring-cloud-starter-task-spark-yarn.version>1.2.0.BUILD-SNAPSHOT</spring-cloud-starter-task-spark-yarn.version>
+		<spring-cloud-starter-task-spark-client.version>1.2.0.RC1</spring-cloud-starter-task-spark-client.version>
+		<spring-cloud-starter-task-spark-cluster.version>1.2.0.RC1</spring-cloud-starter-task-spark-cluster.version>
+		<spring-cloud-starter-task-spark-yarn.version>1.2.0.RC1</spring-cloud-starter-task-spark-yarn.version>
 		<!--<spring-cloud-starter-task-sqoop-job.version>1.2.0.M1</spring-cloud-starter-task-sqoop-job.version>-->
 		<!--<spring-cloud-starter-task-sqoop-tool.version>1.2.0.M1</spring-cloud-starter-task-sqoop-tool.version>-->
-		<spring-cloud-starter-task-timestamp.version>1.2.0.BUILD-SNAPSHOT</spring-cloud-starter-task-timestamp.version>
-		<spring-cloud-starter-task-jdbchdfs-local.version>1.2.0.BUILD-SNAPSHOT</spring-cloud-starter-task-jdbchdfs-local.version>
-		<spring-cloud-starter-task-composedtaskrunner.version>1.2.0.BUILD-SNAPSHOT</spring-cloud-starter-task-composedtaskrunner.version>
+		<spring-cloud-starter-task-timestamp.version>1.2.0.RC1</spring-cloud-starter-task-timestamp.version>
+		<spring-cloud-starter-task-jdbchdfs-local.version>1.2.0.RC1</spring-cloud-starter-task-jdbchdfs-local.version>
+		<spring-cloud-starter-task-composedtaskrunner.version>1.0.0.RC1</spring-cloud-starter-task-composedtaskrunner.version>
 	</properties>
 	<profiles>
 		<profile>
