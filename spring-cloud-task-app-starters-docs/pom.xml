@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.springframework.cloud.task.app</groupId>
 		<artifactId>task-app-starters-release-train-build</artifactId>
-		<version>Clark.M1</version>
+		<version>Clark.BUILD-SNAPSHOT</version>
 	</parent>
 	<artifactId>spring-cloud-task-app-starters-docs</artifactId>
 	<dependencies>
