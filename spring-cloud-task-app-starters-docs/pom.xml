@@ -57,6 +57,11 @@
 			<artifactId>spring-cloud-starter-task-composedtaskrunner</artifactId>
 			<version>${spring-cloud-starter-task-composedtaskrunner.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework.cloud.task.app</groupId>
+			<artifactId>spring-cloud-starter-task-timestamp-batch</artifactId>
+			<version>${spring-cloud-starter-task-timestamp-batch.version}</version>
+		</dependency>
 	</dependencies>
 	<profiles>
 		<profile>

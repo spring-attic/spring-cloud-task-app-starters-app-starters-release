@@ -51,6 +51,8 @@
 										"${spring-cloud-starter-task-jdbchdfs-local.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-jdbchdfs-local.version}";
 								pom.properties['composedtaskrunner-docker.tag']=
 										"${spring-cloud-starter-task-composedtaskrunner.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-composedtaskrunner.version}"
+								pom.properties['timestamp-batch-docker.tag']=
+										"${spring-cloud-starter-task-timestamp-batch.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-timestamp-batch.version}";
 								]]></source>
 						</configuration>
 					</execution>
