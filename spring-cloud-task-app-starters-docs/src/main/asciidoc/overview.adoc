@@ -167,8 +167,8 @@ Please look into the existing starters for how to design and structure a new one
 main `@Configuration` class of your starter as `FoobarTaskConfiguration` as this is the default convention used by
 the app generation later. The default package for the class with `@Configuration` is `org.springfamework.cloud.task.app.foobar`.
 If you have a different class/package name, see below for how to override that in the app generator.
-The technology name for which the app starter is created can be a hyphenated stream of strings such as in `spark-client`
-This starter module for this needs to be `spring-cloud-starter-task-spark-client`.
+The technology name for which the app starter is created can be a hyphenated stream of strings such as in `timestamp-batch`
+This starter module for this needs to be `spring-cloud-starter-task-timestamp-batch`.
 
 The starters in `spring-cloud-task-app-starters` are slightly different from the other starters in spring-boot and
 spring-cloud in that here we don't provide a way to auto configure any configuration through spring factories mechanism.

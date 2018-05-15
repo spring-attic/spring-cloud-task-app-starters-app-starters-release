@@ -4,53 +4,14 @@
 	<parent>
 		<groupId>org.springframework.cloud.task.app</groupId>
 		<artifactId>task-app-starters-release-train-build</artifactId>
-		<version>Clark.BUILD-SNAPSHOT</version>
+		<version>Dearborn.M1</version>
 	</parent>
 	<artifactId>spring-cloud-task-app-starters-docs</artifactId>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.cloud.task.app</groupId>
-			<artifactId>spring-cloud-starter-task-spark-client</artifactId>
-			<version>${spring-cloud-starter-task-spark-client.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud.task.app</groupId>
-			<artifactId>spring-cloud-starter-task-spark-cluster</artifactId>
-			<version>${spring-cloud-starter-task-spark-cluster.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud.task.app</groupId>
-			<artifactId>spring-cloud-starter-task-spark-yarn</artifactId>
-			<version>${spring-cloud-starter-task-spark-yarn.version}</version>
-		</dependency>
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.cloud.task.app</groupId>-->
-			<!--<artifactId>spring-cloud-starter-task-sqoop-job</artifactId>-->
-			<!--<version>${spring-cloud-starter-task-sqoop-job.version}</version>-->
-		<!--</dependency>-->
-		<!--<dependency>-->
-			<!--<groupId>org.springframework.cloud.task.app</groupId>-->
-			<!--<artifactId>spring-cloud-starter-task-sqoop-tool</artifactId>-->
-			<!--<version>${spring-cloud-starter-task-sqoop-tool.version}</version>-->
-		<!--</dependency>-->
-		<!--<dependency>-->
-		<!--<groupId>org.springframework.cloud.task.app</groupId>-->
-		<!--<artifactId>spring-cloud-task-sqoop-common</artifactId>-->
-		<!--</dependency>-->
-		<dependency>
-			<groupId>org.springframework.cloud.task.app</groupId>
 			<artifactId>spring-cloud-starter-task-timestamp</artifactId>
 			<version>${spring-cloud-starter-task-timestamp.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud.task.app</groupId>
-			<artifactId>spring-cloud-starter-task-jdbchdfs-local</artifactId>
-			<version>${spring-cloud-starter-task-jdbchdfs-local.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud.task.app</groupId>
-			<artifactId>spring-cloud-task-jdbchdfs-common</artifactId>
-			<version>${spring-cloud-starter-task-jdbchdfs-local.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud.task.app</groupId>
