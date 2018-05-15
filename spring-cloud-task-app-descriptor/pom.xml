@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>org.springframework.cloud.task.app</groupId>
 		<artifactId>task-app-starters-release-train-build</artifactId>
-		<version>Dearborn.M1</version>
+		<version>Dearborn.BUILD-SNAPSHOT</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
