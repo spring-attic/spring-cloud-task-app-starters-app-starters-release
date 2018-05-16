@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>org.springframework.cloud.task.app</groupId>
 		<artifactId>task-app-starters-release-train-build</artifactId>
-		<version>Clark.BUILD-SNAPSHOT</version>
+		<version>Clark.SR1</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
@@ -41,14 +41,6 @@
 												"${spring-cloud-starter-task-timestamp.version}".contains('RELEASE') ? 'repo.spring.io/libs-release' : 'repo.spring.io/milestone';
 								pom.properties['timestamp-docker.tag']=
 										"${spring-cloud-starter-task-timestamp.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-timestamp.version}";
-								pom.properties['spark-client-docker.tag']=
-										"${spring-cloud-starter-task-spark-client.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-spark-client.version}";
-								pom.properties['spark-cluster-docker.tag']=
-										"${spring-cloud-starter-task-spark-cluster.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-spark-cluster.version}";
-								pom.properties['spark-yarn-docker.tag']=
-										"${spring-cloud-starter-task-spark-yarn.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-spark-yarn.version}";
-								pom.properties['jdbchdfs-local-docker.tag']=
-										"${spring-cloud-starter-task-jdbchdfs-local.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-jdbchdfs-local.version}";
 								pom.properties['composedtaskrunner-docker.tag']=
 										"${spring-cloud-starter-task-composedtaskrunner.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-composedtaskrunner.version}"
 								pom.properties['timestamp-batch-docker.tag']=
