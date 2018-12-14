@@ -18,9 +18,9 @@
 	</modules>
 
 	<properties>
-		<spring-cloud-starter-task-timestamp.version>2.1.0.BUILD-SNAPSHOT<</spring-cloud-starter-task-timestamp.version>
-		<spring-cloud-starter-task-composedtaskrunner.version>2.1.0.BUILD-SNAPSHOT<</spring-cloud-starter-task-composedtaskrunner.version>
-		<spring-cloud-starter-task-timestamp-batch.version>2.1.0.BUILD-SNAPSHOT<</spring-cloud-starter-task-timestamp-batch.version>
+		<spring-cloud-starter-task-timestamp.version>2.1.0.BUILD-SNAPSHOT</spring-cloud-starter-task-timestamp.version>
+		<spring-cloud-starter-task-composedtaskrunner.version>2.1.0.BUILD-SNAPSHOT</spring-cloud-starter-task-composedtaskrunner.version>
+		<spring-cloud-starter-task-timestamp-batch.version>2.1.0.BUILD-SNAPSHOT</spring-cloud-starter-task-timestamp-batch.version>
 	</properties>
 	<profiles>
 		<profile>
