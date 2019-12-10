@@ -22,6 +22,7 @@
 		<spring-cloud-starter-task-composedtaskrunner.version>2.1.4.BUILD-SNAPSHOT</spring-cloud-starter-task-composedtaskrunner.version>
 		<spring-cloud-starter-task-timestamp-batch.version>2.1.1.BUILD-SNAPSHOT</spring-cloud-starter-task-timestamp-batch.version>
 	</properties>
+
 	<profiles>
 		<profile>
 			<id>spring</id>
