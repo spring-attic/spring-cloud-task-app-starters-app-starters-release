@@ -17,7 +17,7 @@ As a user of Spring Cloud Task Application Starters you have access to two types
 
 _Starters_ are libraries that contain the complete configuration of a Spring Cloud Task application with a specific role
 (e.g. an _JDBC HDFS_ that migrates data from a JDBC Repository via sql query to a file on hdfs).
-Starters are not executable applications, and are intended to be included in other Spring Boot applications.
+Starters are not executable applications and are intended to be included in other Spring Boot applications.
 
 _Prebuilt applications_ are Spring Boot applications that include the starters.
 Prebuilt applications are http://docs.spring.io/spring-boot/docs/current-SNAPSHOT/reference/htmlsingle/#getting-started-first-application-executable-jar[uberjars] and include minimal code required to execute standalone.
@@ -57,7 +57,7 @@ The artifact id follows the format `<functionality>-task`.
 
 *Docker*
 
-The Docker versions of the applications are available in Docker Hub, at https://hub.docker.com/r/springcloudtask/. 
+The Docker versions of the applications are available in Docker Hub, at https://hub.docker.com/r/springcloudtask/.
 Naming and versioning follows the same general conventions as Maven, e.g.
 
 `docker pull springcloudtask/timestamp-task`
