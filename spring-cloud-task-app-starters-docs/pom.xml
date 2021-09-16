@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.springframework.cloud.task.app</groupId>
 		<artifactId>task-app-starters-release-train-build</artifactId>
-		<version>Elston.BUILD-SNAPSHOT</version>
+		<version>Elston.SR3</version>
 	</parent>
 	<artifactId>spring-cloud-task-app-starters-docs</artifactId>
 	<dependencies>
@@ -12,11 +12,6 @@
 			<groupId>org.springframework.cloud.task.app</groupId>
 			<artifactId>spring-cloud-starter-task-timestamp</artifactId>
 			<version>${spring-cloud-starter-task-timestamp.version}</version>
-		</dependency>
-		<dependency>
-			<groupId>org.springframework.cloud.task.app</groupId>
-			<artifactId>spring-cloud-starter-task-composedtaskrunner</artifactId>
-			<version>${spring-cloud-starter-task-composedtaskrunner.version}</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.cloud.task.app</groupId>

@@ -3,7 +3,7 @@
 	<parent>
 		<groupId>org.springframework.cloud.task.app</groupId>
 		<artifactId>task-app-starters-release-train-build</artifactId>
-		<version>Elston.BUILD-SNAPSHOT</version>
+		<version>Elston.SR3</version>
 	</parent>
 	<modelVersion>4.0.0</modelVersion>
 
@@ -41,8 +41,6 @@
 												"${spring-cloud-starter-task-timestamp.version}".contains('RELEASE') ? 'repo.spring.io/libs-release' : 'repo.spring.io/milestone';
 								pom.properties['timestamp-docker.tag']=
 										"${spring-cloud-starter-task-timestamp.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-timestamp.version}";
-								pom.properties['composedtaskrunner-docker.tag']=
-										"${spring-cloud-starter-task-composedtaskrunner.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-composedtaskrunner.version}"
 								pom.properties['timestamp-batch-docker.tag']=
 										"${spring-cloud-starter-task-timestamp-batch.version}".contains('BUILD-SNAPSHOT') ? 'latest' : "${spring-cloud-starter-task-timestamp-batch.version}";
 								]]></source>

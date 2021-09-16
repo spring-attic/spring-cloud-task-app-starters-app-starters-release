@@ -5,7 +5,6 @@
 :branch: master
 
 include::{app-starters-root}/timestamp/{branch}/spring-cloud-starter-task-timestamp/README.adoc[tags=ref-doc]
-include::{app-starters-root}/composed-task-runner/{branch}/spring-cloud-starter-task-composedtaskrunner/README.adoc[tags=ref-doc]
 include::{app-starters-root}/timestamp-batch/{branch}/spring-cloud-starter-task-timestamp-batch/README.adoc[tags=ref-doc]
 
 :leveloffset: -1
